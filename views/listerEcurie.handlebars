@@ -1,0 +1,77 @@
+<h1>Liste des ecuries enregistrés</h1>
+<table>
+    <tr>
+        <td width="80%">
+            {{#if ecurie}}
+                <table class="resultatsEcurie">
+                    <tr>
+                        <td>
+                            <img src="/image/ecurie/{{ecurie.ECUADRESSEIMAGE}}" alt="image ecurie" width="100"/>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <strong>Nom : </strong>{{ecurie.ECUNOM}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Directeur : </strong>{{ecurie.ECUNOMDIR}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Adresse : </strong>{{ecurie.ECUADRSIEGE}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Pays : </strong>{{ecurie.PAYNOM}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Fournisseur de pneumatiques : </strong>{{ecurie.FPNOM}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <strong>Pilotes : </strong><br>
+                {{#each pilotes}}
+                    <a class="infoBulle">{{this.PILNOM}} {{this.PILPRENOM}}
+                        <img src="/image/pilote/{{this.PHOADRESSE}}" alt="photo pilote" width="150"/></a><br>
+                {{/each}}
+                <br>
+                <table>
+                    {{#each voitures}}
+
+                        <tr>
+                            <td>
+                                <img src="/image/ecurie/voiture/{{this.VOIADRESSEIMAGE}}" alt="une voiture" height="200" width="200"/><br>
+                            <td>
+                                <p><strong>Modèle : </strong>{{this.VOINOM}}</p>
+                                <p><strong>Libellé : </strong>{{this.TYPELIBELLE}}</p>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </table>
+            {{/if}}
+        </td>
+        <td>
+            <table class="tabpayscir">
+                {{#each listeEcurie}}
+                    <tr>
+                        <td><img src="/image/pays/{{this.payadrdrap}}" alt="drapeau du pays"/>
+                            <a href="/detailEcurie/{{this.ecunum}}">{{this.ecunom}}</a>
+                        </td>
+                    </tr>
+                {{/each}}
+            </table>
+        </td>
+    </tr>
+</table>
+<br class="myboth"/>

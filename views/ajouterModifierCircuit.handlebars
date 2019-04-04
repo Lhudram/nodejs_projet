@@ -1,0 +1,59 @@
+<h3> {{titre}} </h3>
+<form action="#" method="post">
+    <table>
+        <tr>
+            <td>
+                <label for="nom">Nom</label>
+            </td>
+            <td>
+                <input id="nom" value="{{nom}}" type="text" name="circuit[nom]"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="longueur">Longueur</label>
+            </td>
+            <td>
+                <input id="longueur" type="number" min="0" value="{{directeur}}" name="circuit[longueur]"/>m
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="pays">Pays</label>
+            </td>
+            <td>
+                <select id="pays" name="circuit[pays]">
+                    {{#each pays}}
+                        <option value="{{this.paynum}}" {{this.selected}}>{{this.paynom}}</option>
+                    {{/each}}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="image">Image</label>
+            </td>
+            <td>
+                <input id="image" type="file" accept="image/*" value="{{image}}" name="circuit[image]"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="nbrspectateurs">Nombre de personnes</label>
+            </td>
+            <td>
+                <input id="nbrspectateurs" type="number" min="0" value="{{nbrspectateurs}}" name="circuit[nbrpersonnes]"/>personnes
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="description">Description</label>
+            </td>
+            <td>
+                <textarea rows="3" cols="80" id="description" name="circuit[texte]">{{texte}}</textarea>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="{{titreBouton}}"/>
+    <input type="hidden" value="{{id}}" name="id">
+</form>

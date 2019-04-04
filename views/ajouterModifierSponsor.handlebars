@@ -1,0 +1,35 @@
+<h3> {{titre}} </h3>
+<form action="#" method="post">
+    <table>
+        <tr>
+            <td>
+                <label for="nom">Nom</label>
+            </td>
+            <td>
+                <input id="nom" value="{{nom}}" type="text" name="sponsor[nom]"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="activite">Secteur d'activite</label>
+            </td>
+            <td>
+                <input id="activite" type="text" value="{{secteur}}" name="sponsor[activite]"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="ecurie">Ecurie sponsorise</label>
+            </td>
+            <td>
+                <select id="ecurie" name="sponsor[ecurie]">
+                    {{#each ecuries}}
+                        <option value="{{this.ecunum}}" {{this.selected}}>{{this.ecunom}}</option>
+                    {{/each}}
+                </select>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="{{titreBouton}}"/>
+    <input type="hidden" value="{{id}}" name="id">
+</form>

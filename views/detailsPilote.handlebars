@@ -1,0 +1,65 @@
+<table>
+    <td>
+        <img class="photoDetailPilote" src="/image/pilote/{{detailsPilote.phoadresse}}"
+             alt="{{detailsPilote.phocommentaire}}"/>
+    </td>
+    <td>
+
+        <table class="detailPilote">
+            <tr>
+                <td>
+                    <p class="paragraphe"><strong> Nom :</strong> {{detailsPilote.pilnom}} {{detailsPilote.pilprenom}}
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="paragraphe"><strong>Date de naissance : </strong> {{formatDate detailsPilote.pildatenais
+                                                                                             'DD MMMM YYYY' }}</p>
+                </td>
+                <td>
+                    <p class="paragraphe"><strong>Poids :</strong> {{detailsPilote.pilpoids}} kg</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="paragraphe"><strong>Nationalité :</strong> {{detailsPilote.paynat}}</p>
+                </td>
+                <td>
+                    <p class="paragraphe"><strong>Taille :</strong>{{detailsPilote.piltaille}} cm</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="paragraphe"><strong>Ecurie :</strong>
+                        {{#if detailsPilote.ecunom}}{{detailsPilote.ecunom}}
+                        {{else}}
+                            Pas d'écurie cette année
+                        {{/if}}
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </td>
+</table>
+<br>
+{{#if sponsorsPilote}}
+    <p class="paragraphe"><strong>Principaux sponsors :</strong></p>
+{{else}}
+    <p class="paragraphe"><strong>Aucun sponsors</strong></p>
+{{/if}}
+
+{{#each sponsorsPilote}}
+    <br/>
+    <p class="paragraphe"><strong>{{this.sponom}}</strong> ({{this.sposectactivite}})</p>
+{{/each}}
+<br/>
+
+<p><strong>Qui suis-je ? : </strong>{{detailsPilote.piltexte}}</p>
+
+{{#each imagesPilote}}
+    <a href="/image/pilote/{{this.phoadresse}}" rel="lytebox[photo]"
+       title="{{this.phosujet}}&#10;{{this.phocommentaire}}">
+        <img class="miniature" src="/image/pilote/{{this.phoadresse}}" alt="{{this.phocommentaire}}"/>
+    </a>
+{{/each}}

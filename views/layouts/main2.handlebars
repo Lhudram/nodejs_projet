@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title> {{title}}</title>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/x-icon" href="/image/favicon.png"/>
+    <link rel="stylesheet" href="/css/structureAdmin.css"/>
+    <script type="text/javascript" language="javascript" src="/lytebox/lytebox.js"></script>
+    <link rel="stylesheet" href="/lytebox/lytebox.css" type="text/css" media="screen"/>
+</head>
+
+<body class="monBody">
+{{#if session.estConnecte}}
+    <div id="container">
+        <div id="header">
+            <img src="/image/staff_admin.jpg" alt="WROOM l'encyclopédie de la F1"/>
+        </div>
+        <div id="menu">
+            <a href="/pilotes">PILOTES</a> |
+            <a href="/circuits">CIRCUITS</a> |
+            <a href="/ecuries">ECURIES</a> |
+            <a href="/resultats">RESULTATS</a> |
+            <a href="/sponsors">SPONSORS</a> |
+            <a href="/deconnexion">DECONNEXION</a> |
+            <a href="http://localhost:6800">RETOUR AU SITE</a>
+        </div>
+        <div id="contenu">
+            <br/>
+            <br/>
+            {{{body}}}
+        </div>
+        <div id="footer">
+            L'encyclopédie de la F1 depuis janvier 2018 (en NodeJS)
+            <br/>
+            © IUT du Limousin DUT Informatique année 2
+            <br/>
+            <br/>
+            Appllication réalisée par DULHOSTE Martin & BELDENT Corentin
+            <br/>
+            <img src="/image/nodejs.png" id="LogoNode" alt="Logo NodeJs" title="Logo Node.JS"/>
+        </div>
+    </div>
+{{else}}
+        <div id="connexion">
+            <br/>
+            <h2>Administration</h2>
+            <br/>
+            <form method="post">
+                <h3><label for="login" class="label">Login :</label>
+                <input type="text" id="login" name="login" placeholder="admin" required></h3>
+
+                <h3><label for="mdp" class="label">Mot de passe :</label>
+                <input type="password" id="mdp" name="mdp" placeholder="*****" required></h3>
+                <br />
+                <input type="button" value="Annuler">
+                <input type="submit" value="Connexion">
+            </form>
+            <br />
+        </div>
+{{/if}}
+</body>
+</html>

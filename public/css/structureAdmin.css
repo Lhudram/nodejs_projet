@@ -1,0 +1,137 @@
+body {
+    font-family: "Segoe UI", "DejaVu Sans", Verdana, sans-serif;
+    background: url('/image/fond.jpg') repeat;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #000000;
+}
+
+.monBody #container {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    background: #ffffff;
+}
+
+.monBody #header {
+    height: 300px;
+}
+
+.monBody #menu {
+    height: 22px;
+    color: #ffffff;
+    font-size: 1.4em;
+    background: #000000;
+}
+
+.monBody #contenu {
+    padding: 20px;
+}
+
+.monBody #footer {
+    padding: 0 10px;
+    font-size: 0.8em;
+    text-align: center;
+    height: 150px;
+    background: url(/image/footer.jpg) no-repeat;
+}
+
+#menu a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#menu {
+    text-align: center;
+}
+
+#LogoNode {
+    max-height: 20%;
+    max-width: 20%;
+}
+
+.tabpayscir {
+    float: right;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.myboth {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: #0072ff;
+}
+
+#lastResult {
+    text-align: center;
+    border: #000000 2px solid;
+    border-radius: 15px;
+}
+
+#LogoNode {
+    max-height: 20%;
+    max-width: 20%;
+}
+
+.tableau {
+    border-collapse: collapse;
+}
+
+.tableau td {
+    border: black solid 2px;
+    padding: 5px;
+}
+
+input, select, textarea {
+    margin: 10px;
+}
+
+.monBody #connexion {
+    width: 600px;
+    color: white;
+    margin: 10% auto 0;
+    text-align: center;
+    background-color: black;
+}
+
+.monBody #connexion .label {: left;
+}
+
+.centre {
+    text-align: center;
+}
+
+#bouton_valid {
+    color: white;
+    background-color: #620000;
+    padding: 5px 15px;
+}
+
+#pasLigne td {
+    border: none;
+}
+
+#pasDroite {
+    border-right-style: none;
+}
+
+#pasGauche {
+    border-left-style: none;
+}
+
+#agrandir {
+    padding-right: 50px;
+}
+
+.warning {
+    color: red;
+    font-weight: bold;
+}

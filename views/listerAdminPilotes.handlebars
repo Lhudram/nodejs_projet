@@ -1,0 +1,23 @@
+<div class="centre"><img src="/image/cat_pilote.png" alt="casque pilote"/>
+    <h3> Gestion des Pilotes </h3>
+    <a href="ajouterpilote"><img src="/image/act_add.png" alt="icone plus"/>Ajouter un pilote</a></div>
+<br/><br/>
+<table class="tableau">
+    <tr>
+        <td><strong>Nom</strong></td>
+        <td><strong>Prénom</strong></td>
+        <td><strong>Date de naissance</strong></td>
+        <td><strong>Actions</strong></td>
+    </tr>
+    {{#each pilotes}}
+        <tr>
+            <td>{{this.PILNOM}}</td>
+            <td>{{this.PILPRENOM}}</td>
+            <td>{{this.PILDATENAIS}}</td>
+            <td>
+                <a href="/pilotes/modifier/{{this.PILNUM}}"><img src="/image/act_edit.png" alt="icone editer"/>Modifier</a>
+                <a href="/pilotes/supprimer/{{this.PILNUM}}"><img src="/image/act_delete.png" alt="icone supprimer"/>Supprimer</a>
+            </td>
+        </tr>
+    {{/each}}
+</table>

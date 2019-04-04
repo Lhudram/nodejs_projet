@@ -1,0 +1,14 @@
+<div class="centre"><img src="/image/cat_resultat.png" alt="casque pilote"/>
+    <h3> Resultats </h3>
+    <p>Selectionner un grand prix :</p>
+    <select name="listegp" form="submitgp">
+        {{#each listeGP}}
+            <option value="{{this.gpnum}}">{{this.gpnom}}</option>
+        {{/each}}
+    </select>
+
+    <br class="myboth"/>
+    <form id="submitgp" method="post" action="resultats/saisie">
+        <input id="bouton_valid" type="submit" value="VALIDER">
+    </form>
+</div>

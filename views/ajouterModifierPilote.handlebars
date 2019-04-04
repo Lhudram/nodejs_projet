@@ -1,0 +1,87 @@
+<h3> {{titre}} </h3>
+<form action="#" method="post">
+    <table>
+        <tr>
+            <td>
+                <label for="prenom">Prénom</label>
+            </td>
+            <td>
+                <input id="prenom" value="{{prenom}}" type="text" name="pilote[prenom]"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="nom">Nom</label>
+            </td>
+            <td>
+                <input id="nom" type="text" value="{{nom}}" name="pilote[nom]"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="date">Date de naissance</label>
+            </td>
+            <td>
+                <input id="date" type="date" value="{{dateNaiss}}" name="pilote[date]"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="nationalite">Nationalité</label>
+            </td>
+            <td>
+                <select id="nationalite" name="pilote[nationalite]">
+                    {{#each nationalites}}
+                        <option value="{{this.PAYNUM}}" {{this.selected}}>{{this.PAYNOM}}</option>
+                    {{/each}}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="ecurie">Ecurie</label>
+            </td>
+            <td>
+                <select id="ecurie" name="pilote[ecurie]">
+                    {{#each ecuries}}
+                        <option value="{{this.ECUNUM}}" {{this.selected}}>{{this.ECUNOM}}</option>
+                    {{/each}}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="points">Points</label>
+            </td>
+            <td>
+                <input id="points" type="number" min="0" value="{{points}}" name="pilote[points]"/>pts
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="poids">Poids</label>
+            </td>
+            <td>
+                <input id="poids" type="number" min="0" step="0.1" value="{{poids}}" name="pilote[poids]"/>kg
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="taille">Taille</label>
+            </td>
+            <td>
+                <input id="taille" type="number" min="0" step="0.01" value="{{taille}}" name="pilote[taille]"/>cm
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="description">Description</label>
+            </td>
+            <td>
+                <textarea rows="3" cols="80" id="description" name="pilote[description]">{{texte}}</textarea>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="{{titreBouton}}"/>
+    <input type="hidden" value="{{id}}" name="id">
+</form>

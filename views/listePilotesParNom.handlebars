@@ -1,0 +1,12 @@
+<table class="listepilote">
+    <tr>
+        {{#each listePilotesParNom}}
+            <td>
+                <a href="/descriptionPilote/{{this.PILNOM}}/{{this.PILPRENOM}}">
+                    <img class="listePilote" src="/image/pilote/{{this.PHOADRESSE}}" alt="{{this.PHOCOMMENTAIRE}}" />
+                </a>
+                <p> {{this.PILNOM}} {{this.PILPRENOM}}</p>
+            </td>
+        {{/each}}
+    </tr>
+</table>

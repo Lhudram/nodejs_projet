@@ -1,0 +1,151 @@
+body {
+    font-family: "Segoe UI", "DejaVu Sans", Verdana, sans-serif;
+    background: url('/image/fond.jpg') repeat;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #000000;
+}
+
+.monBody #container {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    background: #ffffff;
+}
+
+.monBody #header {
+    height: 300px;
+}
+
+.monBody #menu {
+    height: 22px;
+    color: #ffffff;
+    font-size: 1.4em;
+    background: #000000;
+}
+
+.monBody #contenu {
+    padding: 20px;
+}
+
+
+.monBody #footer {
+    padding: 0 10px;
+    font-size: 0.8em;
+    text-align: center;
+    height: 150px;
+    background: url(/image/footer.jpg) no-repeat;
+}
+
+#menu a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#menu {
+    text-align: center;
+}
+
+#LogoNode {
+    max-height: 20%;
+    max-width: 20%;
+}
+
+.tabpayscir {
+    float: right;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.myboth {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: #0072ff;
+}
+
+#lastResult {
+    text-align: center;
+    border: #000000 2px solid;
+    border-radius: 15px;
+}
+
+#LogoNode {
+    max-height: 20%;
+    max-width: 20%;
+}
+
+.imgDrapeau {
+    width: 32px;
+    height: 32px;
+}
+
+.miniature {
+    width: 150px;
+    height: auto;
+}
+
+.listePilote {
+    width: 85px;
+    height: auto;
+}
+
+.paragraphe {
+    display: inline;
+}
+
+.detailPilote {
+    display: inline-block;
+}
+
+.resultats {
+    float: left;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.resultats td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.gauche {
+    float: left;
+}
+
+.resultatsEcurie {
+    text-align: center;
+}
+
+.resultatsEcurie table td {
+    text-align: left;
+}
+
+.infoBulle:hover, .infoBulle:focus {
+    background: rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.infoBulle img {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 20px;
+    transform: scale(0) rotate(-12deg);
+    border: black solid 10px;
+    border-radius: 5px;
+}
+
+.infoBulle:hover img, .infoBulle:focus img {
+    transform: scale(1) rotate(0);
+}
+
+.centre{
+    text-align: center;
+}

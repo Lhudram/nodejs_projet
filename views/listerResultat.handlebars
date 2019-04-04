@@ -1,0 +1,50 @@
+<h1>Liste des résultats</h1>
+<table class="tabpayscir">
+    {{#each listeCourses}}
+        <tr>
+            <td>
+                <img class="imgDrapeau" src="/image/pays/{{this.PAYADRDRAP}}" alt="image drapeau pays"/>
+            </td>
+            <td>
+                <a href="/resultats/{{this.GPNUM}}">{{this.GPNOM}}</a>
+            </td>
+        </tr>
+    {{/each}}
+</table>
+{{#if pilotes}}
+    <table class="resultats">
+        <tr>
+            <td>
+                <strong>Place</strong>
+            </td>
+            <td>
+                <strong>Pilote</strong>
+            </td>
+            <td>
+                <strong>Temps</strong>
+            </td>
+            <td>
+                <strong>Nb points</strong>
+            </td>
+        </tr>
+        {{#each pilotes}}
+            <tr>
+                <td>
+                    {{this.place}}
+                </td>
+                <td>
+                    {{this.PILNOM}} {{this.PILPRENOM}}
+                </td>
+                <td>
+                    {{this.TEMPSCOURSE}}
+                </td>
+                <td>
+                    {{this.PILPOINTS}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+{{/if}}
+<br class="myboth"/>
+<br>
+{{gp.GPCOMMENTAIRE}}
